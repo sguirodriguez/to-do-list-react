@@ -15,18 +15,18 @@ const TabStatus = ({
   return (
     <>
       {statusTask?.map((item) => {
-        const option = {
+        const status = {
           label: item?.label,
           value: item?.value,
         };
         return (
           <div className="column">
             <div className="container-topics">
-              <text className="title-topic">{option?.label}</text>
+              <text className="title-topic">{status?.label}</text>
               <button
                 onClick={() => {
                   changeIsModalVisible();
-                  setOption(option?.value);
+                  setOption(status?.value);
                 }}
                 className="addButton"
               >
@@ -36,7 +36,7 @@ const TabStatus = ({
             {tasks
               .filter(
                 (item) =>
-                  item.timeline === option?.value &&
+                  item.timeline === status?.value &&
                   item.listSelected === listSelected
               )
               .map((e) => (

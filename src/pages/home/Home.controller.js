@@ -9,7 +9,7 @@ const HomeController = () => {
     { label: "Trabalho", icon: "pieChart", key: "1" },
     { label: "Pessoal", icon: "user", key: "2" },
   ]);
-  const [listSelected, setListSelected] = useState("");
+  const [listSelected, setListSelected] = useState(1);
   const [nameForOption, setNameForOption] = useState("");
   const [iconForOption, setIconForOption] = useState("");
   const [countTasksFinalized, setCountTasksFinalized] = useState(0);

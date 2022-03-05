@@ -50,6 +50,10 @@
     padding: 4px;
     width: 85%;
   }
+
+  .margin-horizontal{
+   margin-bottom: 4px;
+  }
   .cardSelected{
     border: 0.1px solid black;
     border-radius: 10px;

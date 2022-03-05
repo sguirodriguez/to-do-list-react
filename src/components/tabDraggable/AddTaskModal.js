@@ -26,7 +26,7 @@ export default function AddTaskModal({
       name: name,
       description: description,
       timeline: option,
-      listSelected,
+      listSelected: !listSelected ? 1 : listSelected,
     };
     setTasks([...tasks, newTask]);
     setIsModalVisible(!isModalVisible);
