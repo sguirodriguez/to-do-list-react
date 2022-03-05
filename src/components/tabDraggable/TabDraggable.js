@@ -9,7 +9,7 @@ const TabDraggable = ({ listSelected, setCountTasksFinalized }) => {
   const [option, setOption] = useState("");
   const [statusTask, setStatusTask] = useState([
     { label: "Pendente", value: 0 },
-    { label: "Em Desenvolvimento", value: 1 },
+    { label: "Desenvolvimento", value: 1 },
     { label: "Concluída", value: 2 },
   ]);
   const changeIsModalVisible = () => {
