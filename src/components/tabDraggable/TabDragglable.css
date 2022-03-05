@@ -148,3 +148,17 @@
   border: 0.1px solid black;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 80%;
+    height: 200px;
+  }
+
+  .mainGrid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+}
