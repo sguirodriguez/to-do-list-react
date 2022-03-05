@@ -1,4 +1,5 @@
 Lista de Tarefas feita em React.js
+  resumo: pode se adicionar tópicos de tarefas, adicionar tarefas, mover tarefas puxando o bloco dela para outros status e finalizar.
 
 -possue menu lateral que serve para dividir as tarefas em tópicos(trabalho,pessoal,lazer)
   também é possível criar tópico e excluir
