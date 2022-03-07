@@ -75,7 +75,7 @@ export default function Card({
           ref={nodeRef}
         >
           <div className="container-title-and-description">
-            <h4>{currentTask?.name && currentTask?.name}</h4>
+            <h4>{currentTask?.name}</h4>
             <p>{currentTask?.description}</p>
           </div>
           {onDragCard && (
