@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Draggable from "react-draggable";
 import { FiXCircle, FiCheckCircle } from "react-icons/fi";
 import { message } from "antd";
@@ -11,6 +11,7 @@ export default function Card({
   setCountTasksFinalized,
 }) {
   const [onDragCard, setOnDragCard] = useState(false);
+  const nodeRef = useRef(null);
 
   const validateColumn = ({ timeline, newColumn }) => {
     if (timeline >= 2 && newColumn) {
@@ -40,10 +41,10 @@ export default function Card({
   };
 
   const handleEvent = async (event, data) => {
-    if (event.type === "mousemove") {
+    if (event.type === "mousemove" || event.type === "touchmove") {
       setOnDragCard(true);
     }
-    if (event.type === "mouseup") {
+    if (event.type === "mouseup" || event.type === "touchend") {
       if (data?.lastX > 50) {
         return processing({ tasks, newColumn: true });
       }
@@ -66,10 +67,12 @@ export default function Card({
         onMouseUp={handleEvent}
         onTouchStart={handleEvent}
         onTouchEnd={handleEvent}
+        nodeRef={nodeRef}
       >
         <div
           className={onDragCard ? "cardSelected" : "card"}
           key={currentTask?.id}
+          ref={nodeRef}
         >
           <div className="container-title-and-description">
             <h4>{currentTask?.name && currentTask?.name}</h4>
