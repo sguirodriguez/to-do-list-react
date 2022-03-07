@@ -6,10 +6,10 @@ import { ConfigProvider } from "antd";
 import ptBr from "antd/lib/locale/pt_BR";
 
 ReactDOM.render(
-  <React.StrictMode>
+
     <ConfigProvider locale={ptBr}>
       <App />
-    </ConfigProvider>
-  </React.StrictMode>,
+    </ConfigProvider>,
+
   document.getElementById("root")
 );
