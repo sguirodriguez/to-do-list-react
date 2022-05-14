@@ -20,6 +20,7 @@ const TabDraggable = ({ listSelected, setCountTasksFinalized }) => {
   };
   return (
     <div className="mainGrid">
+      {/*TAB QUE MOSTRA AS TAREFAS E SEUS STATUS  */}
       <TabStatus
         changeIsModalVisible={changeIsModalVisible}
         setOption={setOption}
@@ -31,6 +32,7 @@ const TabDraggable = ({ listSelected, setCountTasksFinalized }) => {
         setCountTasksFinalized={setCountTasksFinalized}
       />
 
+      {/*MODAL PARA ADICIONAR TAREFA  */}
       {isModalVisible && (
         <AddTaskModal
           isModalVisible={isModalVisible}
